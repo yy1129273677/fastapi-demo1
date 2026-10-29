@@ -1,8 +1,9 @@
 from fastapi import APIRouter
 from pydantic import BaseModel
 
+router = APIRouter(prefix="/demo", tags=["测试"])
 
-router = APIRouter(prefix="/demo",tags=["测试"])
+
 # 定义用户模型
 class User(BaseModel):
     id: int
@@ -10,8 +11,8 @@ class User(BaseModel):
     email: str
     password: str
 
+
 @router.get("/health")
 def read_health():
-    """ 健康检查 """
+    """健康检查"""
     return {"message": "健康检查通过"}
-    

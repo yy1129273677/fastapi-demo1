@@ -1,0 +1,13 @@
+# Ruff 配置（格式化 + 代码检查）
+# 这个文件只影响 Ruff 的行为，不参与依赖管理，因此不会和 requirements.txt 冲突。
+# 参考文档：https://docs.astral.sh/ruff/configuration/
+
+# 每行最大字符数，与 Black / Ruff 默认值保持一致
+line-length = 88
+
+
+[lint]
+# 忽略的规则（学习阶段觉得噪音大的纯风格提示）
+# I001：import 块的排序与空行格式
+# N999：模块文件名（例如以数字开头）不符合命名规范
+ignore = ["I001", "N999"]
